@@ -3,10 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://vaishnavw45.github.io/netflix-clone",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
@@ -14,12 +16,8 @@
     "@tanstack/react-query": "^4.28.0",
     "@tanstack/react-query-devtools": "^4.29.0",
     "axios": "^1.2.1",
-<<<<<<< HEAD
     "caniuse-lite": "^1.0.30001702",
     "firebase": "^11.4.0",
-=======
-    "firebase": "^9.14.0",
->>>>>>> becf846 (msg)
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
@@ -35,6 +33,7 @@
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
     "autoprefixer": "^10.4.13",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.19",
     "react-hot-loader": "^4.13.1",
     "sass": "^1.56.1",
