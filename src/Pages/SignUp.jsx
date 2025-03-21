@@ -1,5 +1,9 @@
 import React from "react";
 import { useState, useContext } from "react";
+<<<<<<< HEAD
+=======
+
+>>>>>>> becf846 (msg)
 import { Link, useNavigate } from "react-router-dom";
 import { Fade } from "react-reveal";
 import {
@@ -7,8 +11,13 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth";
+<<<<<<< HEAD
 import { setDoc, doc, getFirestore } from "firebase/firestore";
 import { db } from "../Firebase/FirebaseConfig.js";
+=======
+import { setDoc, doc } from "firebase/firestore";
+import { db } from "../Firebase/FirebaseConfig";
+>>>>>>> becf846 (msg)
 import { AuthContext } from "../Context/UserContext";
 import { ClipLoader } from "react-spinners";
 import WelcomePageBanner from "../images/WelcomePageBanner.jpg";
@@ -23,11 +32,16 @@ function SignUp() {
 
   const navigate = useNavigate();
 
+<<<<<<< HEAD
   const handleSubmit = async (e) => {
+=======
+  const handleSubmit = (e) => {
+>>>>>>> becf846 (msg)
     e.preventDefault();
     setLoader(true);
 
     const auth = getAuth();
+<<<<<<< HEAD
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
@@ -61,6 +75,55 @@ function SignUp() {
       console.log(errorCode);
       console.log(errorMessage);
     }
+=======
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        onAuthStateChanged(auth, (user) => {
+          const EmptyArray = [];
+          setDoc(doc(db, "Users", user.uid), {
+            email: email,
+            Uid: user.uid,
+          }).then(() => {
+            setDoc(
+              doc(db, "MyList", user.uid),
+              {
+                movies: EmptyArray,
+              },
+              { merge: true }
+            ).then(() => {
+              setDoc(
+                doc(db, "WatchedMovies", user.uid),
+                {
+                  movies: EmptyArray,
+                },
+                { merge: true }
+              );
+              setDoc(
+                doc(db, "LikedMovies", user.uid),
+                {
+                  movies: EmptyArray,
+                },
+                { merge: true }
+              );
+            });
+          });
+        });
+
+        const user = userCredential.user;
+        if (user != null) {
+          navigate("/");
+        }
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setLoader(false);
+        setErrorMessage(errorMessage);
+        console.log(errorCode);
+        console.log(errorMessage);
+      });
+>>>>>>> becf846 (msg)
   };
 
   return (
@@ -88,7 +151,11 @@ function SignUp() {
                 >
                   <div>
                     <label
+<<<<<<< HEAD
                       htmlFor="email"
+=======
+                      for="email"
+>>>>>>> becf846 (msg)
                       className="block mb-2 text-sm font-medium text-white dark:text-white"
                     >
                       Your email
@@ -109,7 +176,11 @@ function SignUp() {
                   </div>
                   <div>
                     <label
+<<<<<<< HEAD
                       htmlFor="password"
+=======
+                      for="password"
+>>>>>>> becf846 (msg)
                       className="block mb-2 text-sm font-medium text-white dark:text-white"
                     >
                       Password
@@ -162,7 +233,11 @@ function SignUp() {
                         ></input>
                       </div>
                       <div className="ml-3 text-sm">
+<<<<<<< HEAD
                         <label htmlFor="remember" className="text-gray-500">
+=======
+                        <label for="remember" className="text-gray-500">
+>>>>>>> becf846 (msg)
                           Remember me
                         </label>
                       </div>
@@ -197,4 +272,8 @@ function SignUp() {
   );
 }
 
+<<<<<<< HEAD
 export default SignUp;
+=======
+export default SignUp;
+>>>>>>> becf846 (msg)

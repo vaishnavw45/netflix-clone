@@ -2,6 +2,18 @@
 
 ## Overview
 This project is a Netflix clone built using React.js, designed to enhance skills in web development. It features a fully interactive user interface with various functionalities, making it a comprehensive movie-watching experience. The project is powered by TMDB API, utilizing Firebase for database management.
+<<<<<<< HEAD
+=======
+
+## Screenshots
+
+![PC screen](https://i.imgur.com/FLNs9Qy.jpg)
+
+
+
+### mobile experience 
+![mobile screens](https://i.imgur.com/ForTeQi.jpg)
+>>>>>>> becf846 (msg)
  
 ## Key Functionalities
 - Sign In / Sign Up
@@ -19,8 +31,17 @@ This project is a Netflix clone built using React.js, designed to enhance skills
 - [Firebase](https://firebase.google.com/)
 - [Axios](https://www.npmjs.com/package/axios)
 - [Swiper.js](https://swiperjs.com/)
+<<<<<<< HEAD
+=======
+- [React-Youtube](https://www.npmjs.com/package/react-youtube)
+>>>>>>> becf846 (msg)
 - [Tailwind CSS](https://tailwindcss.com/)
 
 ## Description
 This Netflix clone project was developed to deepen understanding and proficiency in React.js. Leveraging popular technologies and APIs like TMDB and Firebase, it encompasses a range of features, from user authentication to dynamic movie listings. The design is tailored to provide an immersive streaming experience, and the codebase reflects best practices in modern web development.
 
+<<<<<<< HEAD
+=======
+## Link to the Site
+[Netflix Clone](https://netflicz-reactjs-rho.vercel.app/)
+>>>>>>> becf846 (msg)

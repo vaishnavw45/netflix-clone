@@ -68,12 +68,24 @@ function Navbar(props) {
           <div className="px-4 mx-auto max-w-8xl sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
+<<<<<<< HEAD
                 <div className="flex-shrink-0">
                   <img
                     className="h-6 cursor-pointer w-18"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png"
                     alt="NETFLIX"
                   />
+=======
+                
+                <div className="flex-shrink-0">
+                  <Link to={"/"}>
+                  <img
+                    className="h-[200px] w-[200px] object-contain cursor-pointer"
+                    src="/src/images/streamXlogo.png"
+                    alt="streamX"
+                  />
+                  </Link>
+>>>>>>> becf846 (msg)
                 </div>
                 <div className="hidden md:block">
                   <div className="flex items-center ml-10 space-x-4">

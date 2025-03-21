@@ -14,8 +14,12 @@
     "@tanstack/react-query": "^4.28.0",
     "@tanstack/react-query-devtools": "^4.29.0",
     "axios": "^1.2.1",
+<<<<<<< HEAD
     "caniuse-lite": "^1.0.30001702",
     "firebase": "^11.4.0",
+=======
+    "firebase": "^9.14.0",
+>>>>>>> becf846 (msg)
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
